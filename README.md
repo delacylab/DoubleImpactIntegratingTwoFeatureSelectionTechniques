@@ -32,6 +32,6 @@ The script _Double_Impact.py integrates _Boruta_Revised.py with LASSOCV from skl
 | X1 | 0 | 0 | 0 | 1 |
 | X2 | 0.5 | 1 | 1 | 1 |
 
-Feature selection is encoded by binary values starting from the third column (0: not selected, 1: selected).  
+Results of feature selection are encoded by binary values starting in the third column (0: not selected, 1: selected).  
 
 The bottom of each script provided a simple execution example.
