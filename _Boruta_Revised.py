@@ -55,6 +55,7 @@
 ########################################################################################################################
 from __future__ import print_function, division
 import numpy as np
+import pandas as pd
 import scipy as sp
 from itertools import product
 from sklearn.utils import check_random_state, check_X_y
@@ -299,6 +300,8 @@ class BorutaClass(BaseEstimator, TransformerMixin):
         :param X: array-like. The training input samples with shape = [n_samples, n_features].
         :param y: array-like. The target values of the training set with shape = [n_samples]
         """
+        if isinstance(X, pd.DataFrame):
+            X = X.values
         n_sample, n_feat = X.shape
         _iter = 1
         for hp_config in product(self.perc_list, self.alpha_list, self.two_step_list):
